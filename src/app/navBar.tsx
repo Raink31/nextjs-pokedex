@@ -9,7 +9,7 @@ export default function NavBar() {
                 height={64}
                 alt='pokeball logo'
             />
-        <h1 className='text-[#fafafa] text-3xl font-[500] absolute left-0 right-0 ml-auto mr-auto w-max'>NATIONAL POKÉDEX</h1>
+        <h1 className='text-[#fafafa] text-3xl font-[500] absolute left-0 right-0 ml-auto mr-auto w-max'>KANTO POKÉDEX</h1>
         </header>
     )
 }

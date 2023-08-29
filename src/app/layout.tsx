@@ -29,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='max-h-screen max-w-[100vw] h-full'>
-      <body className={`${visitor.className} max-h-screen max-w-[100vw] bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900`}>
+    <html lang="en" className='max-w-[100vw] h-full'>
+      <body className={`${visitor.className} h-full m-0 overflow-x-hidden max-w-[100vw] w-screen bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900 bg-no-repeat bg-fixed`}>
         <NavBar />
         {children}
       </body>
