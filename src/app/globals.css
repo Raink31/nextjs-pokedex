@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+.tilt {
+    transition: box-shadow 0.1s, transform 0.1s;
+}
+
+.tilt:hover {
+    box-shadow: 0 0 30px rgba(36, 36, 146, 0.3);
+    cursor: pointer;
 }

@@ -10,6 +10,64 @@ export default function PokemonDetailsPage() {
     const pokemonName = params.pokemonID || "";
 
     const {pokemon, pokemonLoading} = usePokemon(`${pokemonName}`);
+    const types = pokemon?.types.map(type => type.type.name) || ""
+    let type1 = ""
+    let type2 = ""
+
+    function validType() {
+        if (types[0]) {
+            type1 = types[0]
+        }
+        if (types[1]) {
+            type2 = types[1]
+        } else {
+            type2 = ""
+        }
+    }
+
+    function styleType(string : string) {
+        if (string === "") {
+            return ""
+        } else if (string === "fire") {
+            return <span className='bg-[#f08030] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "normal") {
+            return <span className='bg-[#a8a878] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "fighting") {
+            return <span className='bg-[#b32d25] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "water") {
+            return <span className='bg-[#6890f0] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "flying") {
+            return <span className='bg-[#a890f0] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "grass") {
+            return <span className='bg-[#78c850] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "poison") {
+            return <span className='bg-[#a040a0] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "electric") {
+            return <span className='bg-[#f8d030] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "ground") {
+            return <span className='bg-[#e0c068] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "psychic") {
+            return <span className='bg-[#f85888] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "rock") {
+            return <span className='bg-[#b8a038] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "ice") {
+            return <span className='bg-[#98d8d8] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "bug") {
+            return <span className='bg-[#a8b820] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "dragon") {
+            return <span className='bg-[#7038f8] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "ghost") {
+            return <span className='bg-[#705898] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "dark") {
+            return <span className='bg-[#705848] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "steel") {
+            return <span className='bg-[#b8b8d0] w-20 inline-block text-center rounded-full'>{string}</span>
+        } else if (string === "fairy") {
+            return <span className='bg-[#ee99ac] w-20 inline-block text-center rounded-full'>{string}</span>
+        }
+    }
+
+    validType()
 
     return(
         <div className="flex flex-col justify-start items-center mt-4">
@@ -20,18 +78,20 @@ export default function PokemonDetailsPage() {
                 <div className="flex flex-col justify-start items-center mt-4">
                     <h2 className="text-[#fafafa] text-4xl">{pokemon?.name}</h2>
                     <Image 
+                        className="bg-black p-4 bg-opacity-40 rounded-xl border-black border-2 mt-8 mb-8 tilt"
                         src={pokemon.sprites.other["official-artwork"].front_default}
                         height={400}
                         width={400}
                         alt={"Pokemon: " + pokemon.name}
                     />
-                    <p className="text-[#fafafa] text-xl"><span className="text-2xl underline">Types:</span> {pokemon.types.map(type => type.type.name).join(", ")}</p>
-                    <p className="text-[#fafafa] text-xl"><span className="text-2xl underline">Height:</span> {pokemon.height * 10} cm</p>
-                    <p className="text-[#fafafa] text-xl"><span className="text-2xl underline">weight:</span> {pokemon.weight / 10} kg</p>
-
+                    <div className='flex flex-col justify-start gap-4'> 
+                        <p className="text-[#fafafa] text-2xl drop-shadow"><span className="text-3xl border-b-2 pb-1 mr-4">Types:</span> {styleType(type1)} {styleType(type2)}</p>
+                        <p className="text-[#fafafa] text-2xl drop-shadow"><span className="text-3xl border-b-2 pb-1 mr-4">Height:</span> {pokemon.height / 10} m</p>
+                        <p className="text-[#fafafa] text-2xl drop-shadow"><span className="text-3xl border-b-2 pb-1 mr-4">weight:</span> {pokemon.weight / 10} kg</p>
+                    </div>
                 </div>
             }
-            <Link href="/" className="text-[#fafafa] hover:scale-110 mt-10">← Pokédex</Link>
+            <Link href="/" className="text-[#fafafa] drop-shadow hover:scale-110 mt-10 bg-black pt-2 pr-8 pb-2 pl-8 bg-opacity-40 rounded-full">← Back to pokédex</Link>
         </div>
     )
 }
