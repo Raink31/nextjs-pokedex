@@ -9,7 +9,7 @@ export async function getPokemon(name: string) {
 }
 
 export async function getPokemonPage(page: number) {
-    const pageSize = 151;
+    const pageSize = 12;
     const response = await api.get<PokemonPage>(`/pokemon?limit=${pageSize}&offset=${pageSize * (page - 1)}`);
     return response.data;
 }
