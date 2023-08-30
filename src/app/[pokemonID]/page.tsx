@@ -29,41 +29,41 @@ export default function PokemonDetailsPage() {
         if (string === "") {
             return ""
         } else if (string === "fire") {
-            return <span className='bg-[#f08030] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#f08030] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "normal") {
-            return <span className='bg-[#a8a878] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#a8a878] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "fighting") {
-            return <span className='bg-[#b32d25] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#b32d25] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "water") {
-            return <span className='bg-[#6890f0] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#6890f0] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "flying") {
-            return <span className='bg-[#a890f0] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#a890f0] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "grass") {
-            return <span className='bg-[#78c850] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#78c850] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "poison") {
-            return <span className='bg-[#a040a0] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#a040a0] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "electric") {
-            return <span className='bg-[#f8d030] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#f8d030] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "ground") {
-            return <span className='bg-[#e0c068] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#e0c068] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "psychic") {
-            return <span className='bg-[#f85888] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#f85888] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "rock") {
-            return <span className='bg-[#b8a038] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#b8a038] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "ice") {
-            return <span className='bg-[#98d8d8] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#98d8d8] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "bug") {
-            return <span className='bg-[#a8b820] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#a8b820] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "dragon") {
-            return <span className='bg-[#7038f8] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#7038f8] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "ghost") {
-            return <span className='bg-[#705898] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#705898] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "dark") {
-            return <span className='bg-[#705848] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#705848] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "steel") {
-            return <span className='bg-[#b8b8d0] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#b8b8d0] w-28 inline-block text-center rounded-full'>{string}</span>
         } else if (string === "fairy") {
-            return <span className='bg-[#ee99ac] w-20 inline-block text-center rounded-full'>{string}</span>
+            return <span className='bg-[#ee99ac] w-28 inline-block text-center rounded-full'>{string}</span>
         }
     }
 
