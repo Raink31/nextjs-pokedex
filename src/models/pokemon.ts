@@ -22,3 +22,8 @@ export interface Pokemon {
         },
     }
 }
+
+export interface PokemonGeneration {
+    id: number,
+    pokemon_species: { name: string, url: string }[],
+}
